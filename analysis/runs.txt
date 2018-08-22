@@ -1,0 +1,4 @@
+BB+MPZ	Zymo_CS_MPZBB_LSK109    Bead-beating and metapolyzyme, SPRI, MinION Flat
+BB  Zymo_CSII_LSK109    Bead-beating    PromethION  Staggered
+BB  Zymo_CS_LSK109  Bead-beating    MinION  Even
+MPZ Zymo_CS_MPZ_LSK109  Bead-beating and metapolyzyme   MinION  Even

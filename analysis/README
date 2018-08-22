@@ -1,0 +1,4 @@
+./go.sh Zymo_CS_MPZBB_LSK109 GA40000 even &
+./go.sh Zymo_CSII_LSK109 2-A3-D3 staggered &
+./go.sh Zymo_CS_LSK109 GA30000 even &
+./go.sh Zymo_CS_MPZ_LSK109 GA* even &
