@@ -35,7 +35,8 @@
    - **GRIDION-EVEN-BB+MPZ+MPZ-BB (ALL3)**
       - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_ALL3_LSK109.all.fq.gz">Merged FASTQ</a> (35 Gb, `e80c9ac91bf343352d6bcf57815dfc61`)
    - **PION-LOG-BB**
-      - <a href="https://nanopore.s3.climb.ac.uk/PromethION-Zymo_CSII_LSK109.tar.gz">Basecalls</a> (128.2Gb), Basecalls+signal (2.7Tb)
+      - <a href="https://nanopore.s3.climb.ac.uk/PromethION-Zymo_CSII_LSK109.tar.gz">Basecalls</a> (128.2Gb)
+      - Basecalls+signal (2.7Tb)
 
 ## Basic run stats
 
