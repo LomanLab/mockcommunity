@@ -6,24 +6,28 @@
 
   - 10 species, all with equal genomic DNA input
   - Useful for evaluating nanopore assembly and taxonomic assignments
-  - MinION
-     - Bead-beating (~10Gb) (BB-EVEN)
-     - Metapolyzyme (~10Gb) (MPZ-EVEN)
-     - Hybrid BB + MPZ (~17Gb) (MPZ-BB-EVEN)
+  - GRIDION
+     - Bead-beating (~10Gb) (GRIDION-EVEN-BB)
+     - Metapolyzyme (~10Gb) (GRIDION-EVEN-MPZ)
+     - Hybrid BB + MPZ (~17Gb) (GRIDION-EVEN-MPZ-BB)
 
 ### Zymo Community Standards 2 (Log/Staggered)
  
    - 10 species from 10^2 - 10^7 genomic DNA abundance
    - Useful for evaluating limit of detection at high coverage
    - PromethION
-      - Bead-beating (~130Gb) (PION-BB-LOG)
+      - Bead-beating (~130Gb) (PION-LOG-BB)
 
 ## Data availability
 
+   - GRIDION-EVEN-BB, <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_LSK109.tar">Basecalls</a> (21.9Gb), <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_LSK109_signal.tar">Basecalls+signal</a> (252.7Gb)
+   - GRIDION-EVEN-MPZ, <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_MPZ_LSK109">Basecalls</a> (23.2Gb), <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_MPZ_LSK109_signal.tar">Basecalls+signal</a> (283Gb)
+   - GRIDION-EVEN-MPZ-BB, <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_MPZBB_LSK109.tar">Basecalls</a> (35.8Gb), <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_MPZBB_LSK109_signal.tar">Basecalls+signal</a> (396.9Gb)
+   - PION-LOG-BB, <a href="https://nanopore.s3.climb.ac.uk/PromethION-Zymo_CSII_LSK109.tar.gz">Basecalls</a> (128.2Gb), Basecalls+signal (2.7Tb)
 
 ## Basic run stats
 
-### PION-BB-LOG (PromethION)
+### PION-LOG-BB (PromethION)
 
 ```General summary:
 Active channels:        2746
@@ -42,8 +46,17 @@ Number, percentage and megabases of reads above quality cutoffs
 >Q15:   24 (0.0%) 0.0Mb
 ```
 
-![PION-BB-LOG](analysis/nanostat/Zymo_CSII_LSK109/Zymo_CSII_LSK109CumulativeYieldPlot_Gigabases.png)
+![PION-LOG-Yield](analysis/nanostat/Zymo_CSII_LSK109/Zymo_CSII_LSK109CumulativeYieldPlot_Gigabases.png)
 
-![PION-BB-LOG](analysis/nanostat/Zymo_CSII_LSK109/Zymo_CSII_LSK109Weighted_LogTransformed_HistogramReadlength.png)
+![PION-LOG-ReadlengthLog](analysis/nanostat/Zymo_CSII_LSK109/Zymo_CSII_LSK109Weighted_LogTransformed_HistogramReadlength.png)
+
+### GRIDION-EVEN-BB (Zymo\_CS\_LSK109)
+
+
+
+### GRIDION-EVEN-MPZ (GridION-Zymo\_CS\_MPZ\_LSK109)
+
+### GRIDION-EVEN-MPZ-BB (Zymo\_CS\_MPZBB\_LSK109)
+
 
 
