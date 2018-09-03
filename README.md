@@ -23,17 +23,17 @@
    - **GRIDION-EVEN-BB**
       - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_LSK109.tar">Basecalls</a> (21.9Gb)
       - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_LSK109_signal.tar">Basecalls+signal</a> (252.7Gb)
-      - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_BB_LSK109.fq.gz">Merged FASTQ</a> (9.5 Gb, `e1e183c5bee9fedb0357d51d4dc4ed74`)
+      - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_BB_LSK109.fq.gz">Merged FASTQ</a> (3.2M reads, 9.5 Gb, `e1e183c5bee9fedb0357d51d4dc4ed74`)
    - **GRIDION-EVEN-MPZ**
       - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_MPZ_LSK109">Basecalls</a> (23.2Gb)
       - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_MPZ_LSK109_signal.tar">Basecalls+signal</a> (283Gb)
-      - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_MPZ_LSK109.all.fq.gz">Merged FASTQ</a> (9.8 Gb, `f18e3b3323b0ba15fdb783618ea18ea1`)
+      - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_MPZ_LSK109.all.fq.gz">Merged FASTQ</a> (5.7M reads, 9.8 Gb, `f18e3b3323b0ba15fdb783618ea18ea1`)
    - **GRIDION-EVEN-MPZ-BB**
       - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_MPZBB_LSK109.tar">Basecalls</a> (35.8Gb)
       - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_MPZBB_LSK109_signal.tar">Basecalls+signal</a> (396.9Gb)
-      - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_MPZBB_LSK109.all.fq.gz">Merged FASTQ</a> (16 Gb, `88d159842bfc3b70ee1f1bf15c2aa7b9`)
+      - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_MPZBB_LSK109.all.fq.gz">Merged FASTQ</a> (5.8M reads, 16 Gb, `88d159842bfc3b70ee1f1bf15c2aa7b9`)
    - **GRIDION-EVEN-BB+MPZ+MPZ-BB (ALL3)**
-      - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_ALL3_LSK109.all.fq.gz">Merged FASTQ</a> (35 Gb, `e80c9ac91bf343352d6bcf57815dfc61`)
+      - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_ALL3_LSK109.all.fq.gz">Merged FASTQ</a> (14.73M reads, 35 Gb, `e80c9ac91bf343352d6bcf57815dfc61`)
    - **PION-LOG-BB**
       - <a href="https://nanopore.s3.climb.ac.uk/PromethION-Zymo_CSII_LSK109.tar.gz">Basecalls</a> (128.2Gb)
       - Basecalls+signal (2.7Tb)
