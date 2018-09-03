@@ -73,3 +73,26 @@ Number, percentage and megabases of reads above quality cutoffs
 
 
 
+## Initial assembly
+
+```
+minimap2 -t 24 -x ava-ont GridION-Zymo_CS_ALL3_LSK109.all.fq GridION-Zymo_CS_ALL3_LSK109.all.fq | gzip > GridION-Zymo_CS_ALL3_LSK109.all.fq.paf.gz
+miniasm -f GridION-Zymo_CS_ALL3_LSK109.all.fq GridION-Zymo_CS_ALL3_LSK109.all.fq.paf.gz > GridION-Zymo_CS_ALL3_LSK109.all.gfa
+```
+
+### `kraken2` taxonomic assignment
+
+* <a href="https://refdb.s3.climb.ac.uk/kraken2-microbial/hash.k2d">hash.k2d</a> (30 Gb, `b327a46e5f8122c6ce627aecf13ae5b1`)
+* <a href="https://refdb.s3.climb.ac.uk/kraken2-microbial/opts.k2d">opts.k2d</a> (48 b,`e77f42c833b99bf91a8315a3c19f83f7`)
+* <a href="https://refdb.s3.climb.ac.uk/kraken2-microbial/taxo.k2d">taxo.k2d</a> (1.7 Mb`764fee20387217bd8f28ec9bf955c484`)
+
+```
+mkdir kraken2-microbial-fatfree/
+cd kraken2-microbial-fatfree/
+wget https://refdb.s3.climb.ac.uk/kraken2-microbial/hash.k2d
+wget https://refdb.s3.climb.ac.uk/kraken2-microbial/opts.k2d
+wget https://refdb.s3.climb.ac.uk/kraken2-microbial/taxo.k2d
+
+awk '/^S/{print ">"$2"\n"$3}' GridION-Zymo_CS_ALL3_LSK109.all.gfa > 12 GridION-Zymo_CS_ALL3_LSK109.all.gfa.fa
+kraken2 --db kraken2-microbial-fatfree/ --threads 12 GridION-Zymo_CS_ALL3_LSK109.all.gfa.fa > GridION-Zymo_CS_ALL3_LSK109.all.gfa.fa.krak2
+```
