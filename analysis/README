@@ -16,4 +16,10 @@ NanoPlot -p Zymo_CSII_LSK109 -o Zymo_CSII_LSK109 -t 12 --summary ../data/Zymo_CS
 NanoPlot -p Zymo_CS_LSK109 -o Zymo_CS_LSK109 -t 12 --summary ../data/Zymo_CS_LSK109/GA30000/seq*
 NanoPlot -p Zymo_CS_MPZ_LSK109 -o Zymo_CS_MPZ_LSK109 -t 12 --summary ../data/Zymo_CS_MPZ_LSK109/GA20000/seq* ../data/Zymo_CS_MPZ_LSK109/GA30000/seq*
 
+## NanoPlot by fastq
+
+NanoPlot -p Zymo_CS_MPZBB_LSK109 -o Zymo_CS_MPZBB_LSK109_fastq -t 12 --fastq_rich ../data/Zymo_CS_MPZBB_LSK109/GA40000/*.fastq &
+NanoPlot -p Zymo_CSII_LSK109 -o Zymo_CSII_LSK109_fastq -t 12 --fastq_rich ../data/Zymo_CSII_LSK109/2-A3-D3/*.fastq  &
+NanoPlot -p Zymo_CS_LSK109 -o Zymo_CS_LSK109_fastq -t 12 --fastq_rich ../data/Zymo_CS_LSK109/GA30000/*.fastq &
+NanoPlot -p Zymo_CS_MPZ_LSK109 -o Zymo_CS_MPZ_LSK109_fast -t 12 --fastq_rich ../data/Zymo_CS_MPZ_LSK109/GA20000/*.fastq ../data/Zymo_CS_MPZ_LSK109/GA30000/*.fastq &
 
