@@ -20,10 +20,23 @@
 
 ## Data availability
 
-   - GRIDION-EVEN-BB, <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_LSK109.tar">Basecalls</a> (21.9Gb), <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_LSK109_signal.tar">Basecalls+signal</a> (252.7Gb)
-   - GRIDION-EVEN-MPZ, <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_MPZ_LSK109">Basecalls</a> (23.2Gb), <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_MPZ_LSK109_signal.tar">Basecalls+signal</a> (283Gb)
-   - GRIDION-EVEN-MPZ-BB, <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_MPZBB_LSK109.tar">Basecalls</a> (35.8Gb), <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_MPZBB_LSK109_signal.tar">Basecalls+signal</a> (396.9Gb)
-   - PION-LOG-BB, <a href="https://nanopore.s3.climb.ac.uk/PromethION-Zymo_CSII_LSK109.tar.gz">Basecalls</a> (128.2Gb), Basecalls+signal (2.7Tb)
+   - **GRIDION-EVEN-BB**
+      - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_LSK109.tar">Basecalls</a> (21.9Gb)
+      - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_LSK109_signal.tar">Basecalls+signal</a> (252.7Gb)
+      - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_BB_LSK109.fq.gz">Merged FASTQ</a> (3.2M reads, 9.5 GB, `e1e183c5bee9fedb0357d51d4dc4ed74`)
+   - **GRIDION-EVEN-MPZ**
+      - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_MPZ_LSK109">Basecalls</a> (23.2Gb)
+      - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_MPZ_LSK109_signal.tar">Basecalls+signal</a> (283Gb)
+      - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_MPZ_LSK109.all.fq.gz">Merged FASTQ</a> (5.7M reads, 9.8 GB, `f18e3b3323b0ba15fdb783618ea18ea1`)
+   - **GRIDION-EVEN-MPZ-BB**
+      - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_MPZBB_LSK109.tar">Basecalls</a> (35.8Gb)
+      - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_MPZBB_LSK109_signal.tar">Basecalls+signal</a> (396.9Gb)
+      - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_MPZBB_LSK109.all.fq.gz">Merged FASTQ</a> (5.8M reads, 16 GB, `88d159842bfc3b70ee1f1bf15c2aa7b9`)
+   - **GRIDION-EVEN-BB+MPZ+MPZ-BB (ALL3)**
+      - <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_ALL3_LSK109.all.fq.gz">Merged FASTQ</a> (14.73M reads, 35 GB, `e80c9ac91bf343352d6bcf57815dfc61`)
+   - **PION-LOG-BB**
+      - <a href="https://nanopore.s3.climb.ac.uk/PromethION-Zymo_CSII_LSK109.tar.gz">Basecalls</a> (128.2Gb)
+      - Basecalls+signal (2.7Tb)
 
 ## Basic run stats
 
@@ -60,3 +73,26 @@ Number, percentage and megabases of reads above quality cutoffs
 
 
 
+## Initial assembly
+
+```
+minimap2 -t 24 -x ava-ont GridION-Zymo_CS_ALL3_LSK109.all.fq GridION-Zymo_CS_ALL3_LSK109.all.fq | gzip > GridION-Zymo_CS_ALL3_LSK109.all.fq.paf.gz
+miniasm -f GridION-Zymo_CS_ALL3_LSK109.all.fq GridION-Zymo_CS_ALL3_LSK109.all.fq.paf.gz > GridION-Zymo_CS_ALL3_LSK109.all.gfa
+```
+
+### `kraken2` taxonomic assignment
+
+* <a href="https://refdb.s3.climb.ac.uk/kraken2-microbial/hash.k2d">hash.k2d</a> (30 Gb, `b327a46e5f8122c6ce627aecf13ae5b1`)
+* <a href="https://refdb.s3.climb.ac.uk/kraken2-microbial/opts.k2d">opts.k2d</a> (48 b,`e77f42c833b99bf91a8315a3c19f83f7`)
+* <a href="https://refdb.s3.climb.ac.uk/kraken2-microbial/taxo.k2d">taxo.k2d</a> (1.7 Mb`764fee20387217bd8f28ec9bf955c484`)
+
+```
+mkdir kraken2-microbial-fatfree/
+cd kraken2-microbial-fatfree/
+wget https://refdb.s3.climb.ac.uk/kraken2-microbial/hash.k2d
+wget https://refdb.s3.climb.ac.uk/kraken2-microbial/opts.k2d
+wget https://refdb.s3.climb.ac.uk/kraken2-microbial/taxo.k2d
+
+awk '/^S/{print ">"$2"\n"$3}' GridION-Zymo_CS_ALL3_LSK109.all.gfa > 12 GridION-Zymo_CS_ALL3_LSK109.all.gfa.fa
+kraken2 --db kraken2-microbial-fatfree/ --threads 12 GridION-Zymo_CS_ALL3_LSK109.all.gfa.fa > GridION-Zymo_CS_ALL3_LSK109.all.gfa.fa.krak2
+```
