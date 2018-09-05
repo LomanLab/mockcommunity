@@ -1,7 +1,5 @@
 # Nanopore GridION and PromethION Mock Microbial Community Data
 
-## Presentation by Josh Quick at Genome Science 2018
-
 ## Description of data
 
 <a href="https://www.slideshare.net/scalene/assessing-ultradeep-longread-metagenomics-on-oxford-nanopore-promethion">Josh Quick's talk at Genome Science 2018</a>.
