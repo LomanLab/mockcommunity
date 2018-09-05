@@ -8,10 +8,11 @@
 
   - 10 species, all with equal genomic DNA input
   - Useful for evaluating nanopore assembly and taxonomic assignments
-  - GRIDION
+  - GridION
      - Bead-beating (~10Gb) (GRIDION-EVEN-BB)
      - Metapolyzyme (~10Gb) (GRIDION-EVEN-MPZ)
      - Hybrid BB + MPZ (~17Gb) (GRIDION-EVEN-MPZ-BB)
+   - <a href="https://www.zymoresearch.eu/media/amasty/amfile/attach/_D6300_ZymoBIOMICS_Microbial_Community_Standard_v1.1.3.pdf">Zymo Specification Sheet</a>
 
 ### Zymo Community Standards 2 (Log/Staggered)
  
@@ -19,6 +20,7 @@
    - Useful for evaluating limit of detection at high coverage
    - PromethION
       - Bead-beating (~130Gb) (PION-LOG-BB)
+   - <a href="https://www.zymoresearch.eu/media/amasty/amfile/attach/_D6310_ZymoBIOMICS_Microbial_Community_Standard_II_Log_Distribution_v._1.1.2.pdf">Zymo Specification Sheet</a>
 
 ## Data availability
 
