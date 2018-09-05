@@ -1,5 +1,9 @@
 # Nanopore GridION and PromethION Mock Microbial Community Data
 
+## Presentation by Josh Quick at Genome Science 2018
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/x4PlGWhRLFwnxk" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/scalene/assessing-ultradeep-longread-metagenomics-on-oxford-nanopore-promethion" title="Assessing ultra-deep, long-read metagenomics on Oxford Nanopore PromethION" target="_blank">Assessing ultra-deep, long-read metagenomics on Oxford Nanopore PromethION</a> </strong> from <strong><a href="https://www.slideshare.net/scalene" target="_blank">scalene</a></strong> </div>
+
 ## Description of data
 
 ### Zymo Community Standards 2 (Even)
