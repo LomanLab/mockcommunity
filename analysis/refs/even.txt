@@ -1,12 +1,12 @@
 #https://www.zymoresearch.eu/media/amasty/amfile/attach/_D6310_ZymoBIOMICS_Microbial_Community_Standard_II_Log_Distribution_v._1.1.2.pdf		
 Abbrev	Species	Expected
-pa	Pseudomonas aeruginosa	10
-lm	Listeria monocytogenes	10
-ec	Escherichia coli	10
-lf	Lactobacillus fermentum	10
-bs	Bacillus subtilis	10
-cn	Cryptococcus neoformans	10
-ef	Enterococcus faecalis	10
-sc	Saccharomyces cerevisiae	10
-se	Salmonella enterica	10
-sa	Staphylococcus aureus	10
+pa	Pseudomonas aeruginosa	12
+lm	Listeria monocytogenes	12
+ec	Escherichia coli	12
+lf	Lactobacillus fermentum	12
+bs	Bacillus subtilis	12
+cn	Cryptococcus neoformans	2
+ef	Enterococcus faecalis	12
+sc	Saccharomyces cerevisiae	2
+se	Salmonella enterica	12
+sa	Staphylococcus aureus	12
