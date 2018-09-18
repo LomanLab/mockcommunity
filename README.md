@@ -73,18 +73,27 @@ Number, percentage and megabases of reads above quality cutoffs
 
 
 
-## Initial assembly
+## Initial assembly and consensus
 
 ```
 minimap2 -t 24 -x ava-ont GridION-Zymo_CS_ALL3_LSK109.all.fq GridION-Zymo_CS_ALL3_LSK109.all.fq | gzip > GridION-Zymo_CS_ALL3_LSK109.all.fq.paf.gz
-miniasm -f GridION-Zymo_CS_ALL3_LSK109.all.fq GridION-Zymo_CS_ALL3_LSK109.all.fq.paf.gz > GridION-Zymo_CS_ALL3_LSK109.all.gfa
+miniasm -f GridION-Zymo_CS_ALL3_LSK109.all.fq GridION-Zymo_CS_ALL3_LSK109.all.fq.paf.gz > GridION-Zymo_CS_ALL3_LSK109.all.miniasm.gfa
+awk '/^S/{print ">"$2"\n"$3}' GridION-Zymo_CS_ALL3_LSK109.all.miniasm.gfa > GridION-Zymo_CS_ALL3_LSK109.all.miniasm.fa
+minimap2 -t 12 -x map-ont GridION-Zymo_CS_ALL3_LSK109.all.miniasm.fa GridION-Zymo_CS_ALL3_LSK109.all.fq > GridION-Zymo_CS_ALL3_LSK109.all.reads_miniasm.paf
+racon -t 36 GridION-Zymo_CS_ALL3_LSK109.all.fq GridION-Zymo_CS_ALL3_LSK109.all.reads_miniasm.paf GridION-Zymo_CS_ALL3_LSK109.all.miniasm.fa > GridION-Zymo_CS_ALL3_LSK109.all.miniasm.racon_r1.fa
+minimap2 -t 12 -x map-ont GridION-Zymo_CS_ALL3_LSK109.all.miniasm.racon_r1.fa GridION-Zymo_CS_ALL3_LSK109.all.fq > GridION-Zymo_CS_ALL3_LSK109.all.reads_racon1.paf
+racon -t 36 GridION-Zymo_CS_ALL3_LSK109.all.fq GridION-Zymo_CS_ALL3_LSK109.all.reads_racon1.paf GridION-Zymo_CS_ALL3_LSK109.all.miniasm.racon_r1.fa > GridION-Zymo_CS_ALL3_LSK109.all.miniasm.racon_r2.fa
 ```
+
+* <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_ALL3_LSK109.all.miniasm.gfa">Miniasm Assembly (GFA)</a> (62 MB, `8104cd4621b0f6b0153a3309abc4c140`), <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_ALL3_LSK109.all.miniasm.fa">Miniasm Assembly (FASTA)</a> (61 MB, `94c183b396beb21090e324c2ff32baee`) 
+* <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_ALL3_LSK109.all.miniasm.racon_r1.fa">Miniasm Assembly + Racon Round 1 (FASTA)</a> (61 MB, `761e8b4cf94a68aa9dd91af9ecc671c2`)
+* <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_ALL3_LSK109.all.miniasm.racon_r1.fa">Miniasm Assembly + Racon Round 2 (FASTA)</a> (61 MB, `02dd8ab095849ddcd9000a93a80d6754`)
 
 ### `kraken2` taxonomic assignment
 
-* <a href="https://refdb.s3.climb.ac.uk/kraken2-microbial/hash.k2d">hash.k2d</a> (30 Gb, `b327a46e5f8122c6ce627aecf13ae5b1`)
-* <a href="https://refdb.s3.climb.ac.uk/kraken2-microbial/opts.k2d">opts.k2d</a> (48 b,`e77f42c833b99bf91a8315a3c19f83f7`)
-* <a href="https://refdb.s3.climb.ac.uk/kraken2-microbial/taxo.k2d">taxo.k2d</a> (1.7 Mb`764fee20387217bd8f28ec9bf955c484`)
+* <a href="https://refdb.s3.climb.ac.uk/kraken2-microbial/hash.k2d">hash.k2d</a> (30 GB, `b327a46e5f8122c6ce627aecf13ae5b1`)
+* <a href="https://refdb.s3.climb.ac.uk/kraken2-microbial/opts.k2d">opts.k2d</a> (48 B,`e77f42c833b99bf91a8315a3c19f83f7`)
+* <a href="https://refdb.s3.climb.ac.uk/kraken2-microbial/taxo.k2d">taxo.k2d</a> (1.7 MB, `764fee20387217bd8f28ec9bf955c484`)
 
 ```
 mkdir kraken2-microbial-fatfree/
@@ -96,3 +105,4 @@ wget https://refdb.s3.climb.ac.uk/kraken2-microbial/taxo.k2d
 awk '/^S/{print ">"$2"\n"$3}' GridION-Zymo_CS_ALL3_LSK109.all.gfa > 12 GridION-Zymo_CS_ALL3_LSK109.all.gfa.fa
 kraken2 --db kraken2-microbial-fatfree/ --threads 12 GridION-Zymo_CS_ALL3_LSK109.all.gfa.fa > GridION-Zymo_CS_ALL3_LSK109.all.gfa.fa.krak2
 ```
+
