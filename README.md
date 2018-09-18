@@ -87,7 +87,7 @@ racon -t 36 GridION-Zymo_CS_ALL3_LSK109.all.fq GridION-Zymo_CS_ALL3_LSK109.all.r
 
 * <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_ALL3_LSK109.all.miniasm.gfa">Miniasm Assembly (GFA)</a> (62 MB, `8104cd4621b0f6b0153a3309abc4c140`), <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_ALL3_LSK109.all.miniasm.fa">Miniasm Assembly (FASTA)</a> (61 MB, `94c183b396beb21090e324c2ff32baee`) 
 * <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_ALL3_LSK109.all.miniasm.racon_r1.fa">Miniasm Assembly + Racon Round 1 (FASTA)</a> (61 MB, `761e8b4cf94a68aa9dd91af9ecc671c2`)
-* <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_ALL3_LSK109.all.miniasm.racon_r1.fa">Miniasm Assembly + Racon Round 2 (FASTA)</a> (61 MB, `02dd8ab095849ddcd9000a93a80d6754`)
+* <a href="https://nanopore.s3.climb.ac.uk/GridION-Zymo_CS_ALL3_LSK109.all.miniasm.racon_r2.fa">Miniasm Assembly + Racon Round 2 (FASTA)</a> (61 MB, `02dd8ab095849ddcd9000a93a80d6754`)
 
 ### `kraken2` taxonomic assignment
 
