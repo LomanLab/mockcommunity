@@ -106,3 +106,16 @@ awk '/^S/{print ">"$2"\n"$3}' GridION-Zymo_CS_ALL3_LSK109.all.gfa > 12 GridION-Z
 kraken2 --db kraken2-microbial-fatfree/ --threads 12 GridION-Zymo_CS_ALL3_LSK109.all.gfa.fa > GridION-Zymo_CS_ALL3_LSK109.all.gfa.fa.krak2
 ```
 
+### `bracken` abundance assessment
+Additionally, we've processed the database with `bracken` (assuming a read length distributed around 2500 bp).
+
+* <a href="https://refdb.s3.climb.ac.uk/kraken2-microbial/database.kraken">database.kraken</a> (12 GB, `83cde830fbcc397ea9de5b69914aab1f`)
+* <a href="https://refdb.s3.climb.ac.uk/kraken2-microbial/database2500mers.kraken">database2500mers.kraken</a> (3.5 MB, `f6faff82620f2c8fd4218dbdcc4237bd`)
+* <a href="https://refdb.s3.climb.ac.uk/kraken2-microbial/database2500mers.kmer_distrib">database2500mers.kmer_distrib</a> (666 KB, `2a3d08d7c40b59882e149c33dc8e7b8b`)
+
+```
+cd kraken2-microbial-fatfree/
+wget https://refdb.s3.climb.ac.uk/kraken2-microbial/database.kraken
+wget https://refdb.s3.climb.ac.uk/kraken2-microbial/database2500mers.kraken
+wget https://refdb.s3.climb.ac.uk/kraken2-microbial/database2500mers.kmer_distrib
+```
