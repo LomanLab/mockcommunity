@@ -39,11 +39,11 @@ We loaded the same libraries on GridION and PromethION, permitting a direct comp
 
 Please refer to <a href="https://www.slideshare.net/scalene/assessing-ultradeep-longread-metagenomics-on-oxford-nanopore-promethion">Josh Quick's talk at Genome Science 2018</a>.
 
-### License
+### License
 
 Data are available under a Creative Commons Attribution 4.0 International (CC BY 4.0) <a href="https://creativecommons.org/licenses/by/4.0/">license</a>, i.e. you are free to use the data with attribution.
 
-### Acknowlegements
+### Acknowlegements
 
 We are grateful to Hannah McDonnell (Cambridge Biosciences) for free samples of the Zymo mock community, and Shuiquan Tang for helpful advice for this work. We are grateful to Divya Mirrington (Oxford Nanopore Technologies) for assistance with PromethION library preparation. We thank Radoslaw Poplawski (CLIMB, University of Birmingham) for sequencer networking and file system help with the data release. We are grateful to <a href="http://www.climb.ac.uk">CLIMB</a> for data hosting.
 
