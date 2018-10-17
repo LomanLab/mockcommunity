@@ -36,18 +36,10 @@ We loaded the same libraries on GridION and PromethION, permitting a direct comp
 | Zymo-GridION-EVEN-BB-SN    | 3.5  | 14   | <a href="https://nanopore.s3.climb.ac.uk/Zymo-GridION-EVEN-BB-SN_basecalled.tgz">tar.gz</a> | to follow | <a href="analysis/nanoplot_fastq/Zymo-GridION-EVEN-BB-SN_nanoplot_fastq/Zymo-GridION-EVEN-BB-SNNanoPlot-report.pdf">pdf</a> 
 
 ## Further information
-
-
-
-
-## License
-
-
+### License
 Data are available under a Creative Commons Attribution 4.0 International (CC BY 4.0) <a href="https://creativecommons.org/licenses/by/4.0/">license</a>, i.e. you are free to use the data with attribution.
 
-
-## Acknowlegements
-
+### Acknowlegements
 We are grateful to Hannah McDonnell (Cambridge Biosciences) for free samples of the Zymo mock community, and Shiquang Tang for helpful advice for this work. We are grateful to Divya Mirrington (Oxford Nanopore Technologies) for assistance with PromethION library preparation. We thank Radoslaw Poplawski (CLIMB, University of Birmingham) for sequencer networking and file system help with the data release. We are grateful to <a href="http://www.climb.ac.uk">CLIMB</a> for data hosting.
 
 
