@@ -36,7 +36,7 @@ c=b %>% mutate(Sample = prefix) %>%
         arrange(Perc)
    
 print(c)
-write_tsv(c %>% select(Genome, bases, meanlen, medianlen, N50, maxlen, Cov, Perc, Expected, FoldChange, CellType), paste0(prefix,"_stats.txt"))
+write_tsv(c %>% select(Genome, bases, meanlen, medianlen, N50, maxlen, Cov, Perc, Expected, FoldChange, CellType), paste0(prefix,"_stats.tsv"))
 
 print(c%>%select(Genome,bases,N50,Cov,Perc,Expected,FoldChange,CellType))
 

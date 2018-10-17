@@ -42,6 +42,9 @@
 
 ### PION-LOG-BB (PromethION)
 
+```NanoPlot --summary Zymo-GridION-LOG-BB-SN/GA20000/seque* --maxlength 30000 --N50 --raw -t 12 -p Zymo-GridION-LOG-BB-SN -o Zymo-GridION-LOG-BB-SN_nanoplot --title "Zymo GridION LOG BB SN" --percentqual```
+
+
 ```General summary:
 Active channels:        2746
 Mean read length:       3699.9
