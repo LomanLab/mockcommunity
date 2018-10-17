@@ -11,7 +11,7 @@ We loaded the same libraries on GridION and PromethION, permitting a direct comp
 ### Zymo Community Standards 2 (Even) Batch ZRC190633
 
   - Useful for evaluating nanopore data analysis, including basecalling, alignment, assembly and taxonomic assignment methods
-  - 10 species (5 Gram-positive, 3 Gram-negative, 2 yeast), all with equal genomic DNA input
+  - 10 species (5 Gram-positive, 3 Gram-negative, 2 yeast): the bacteria are present at 12% and yeast at 2% (by genomic DNA)
   - <a href="https://www.zymoresearch.eu/media/amasty/amfile/attach/_D6300_ZymoBIOMICS_Microbial_Community_Standard_v1.1.3.pdf">Zymo Specification Sheet</a>
   - Data available from:
      - GridION (Zymo-GridION-EVEN-BB-SN)
