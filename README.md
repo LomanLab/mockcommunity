@@ -30,12 +30,15 @@ We loaded the same libraries on GridION and PromethION, permitting a direct comp
 
 | Name                   | Reads (M)    | Yield (G)    | FASTQ      | FAST5       | NanoStat       |
 |----------------------------|------|------|------------|-------------|----------------|
-| Zymo-PromethION-LOG-BB-SN  | 35.1 | 148  | <a href="https://nanopore.s3.climb.ac.uk/Zymo-PromethION-LOG-BB-SN_basecalls.tar.gz">tar.gz</a>      | to follow   | <a href="analysis/nanoplot_fastq/Zymo-PromethION-LOG-BB-SN_nanoplot_fastq/Zymo-PromethION-LOG-BB-SNNanoPlot-report.pdf">pdf</a>
-| Zymo-PromethION-EVEN-BB-SN | 36.5 | 146  | <a href="https://nanopore.s3.climb.ac.uk/Zymo-PromethION-EVEN-BB-SN_basecalls.tar.gz">tar.gz</a> | to follow | <a href="https://github.com/LomanLab/mockcommunity/blob/master/analysis/nanoplot_fastq/Zymo-PromethION-EVEN-BB-SN_nanoplot_fastq/Zymo-PromethION-EVEN-BB-SNNanoPlot-report.pdf">pdf</a>
-| Zymo-GridION-LOG-BB-SN     | 3.7  | 16   | <a href="https://nanopore.s3.climb.ac.uk/Zymo-GridION-LOG-BB-SN_basecalled.tgz">tar.gz</a> | to follow | <a href="analysis/nanoplot_fastq/Zymo-GridION-LOG-BB-SN_nanoplot_fastq/Zymo-GridION-LOG-BB-SNNanoPlot-report.pdf">pdf</a>
-| Zymo-GridION-EVEN-BB-SN    | 3.5  | 14   | <a href="https://nanopore.s3.climb.ac.uk/Zymo-GridION-EVEN-BB-SN_basecalled.tgz">tar.gz</a> | to follow | <a href="analysis/nanoplot_fastq/Zymo-GridION-EVEN-BB-SN_nanoplot_fastq/Zymo-GridION-EVEN-BB-SNNanoPlot-report.pdf">pdf</a> 
+| Zymo-PromethION-LOG-BB-SN  | 35.1 | 148  | <a href="https://nanopore.s3.climb.ac.uk/Zymo-PromethION-LOG-BB-SN_basecalls.tar.gz">tar.gz</a>      | to follow   | <a href="analysis/nanoplot_fastq/Zymo-PromethION-LOG-BB-SN_nanoplot_fastq/Zymo-PromethION-LOG-BB-SNNanoPlot-report.pdf">pdf</a> |
+| Zymo-PromethION-EVEN-BB-SN | 36.5 | 146  | <a href="https://nanopore.s3.climb.ac.uk/Zymo-PromethION-EVEN-BB-SN_basecalls.tar.gz">tar.gz</a> | to follow | <a href="https://github.com/LomanLab/mockcommunity/blob/master/analysis/nanoplot_fastq/Zymo-PromethION-EVEN-BB-SN_nanoplot_fastq/Zymo-PromethION-EVEN-BB-SNNanoPlot-report.pdf">pdf</a> |
+| Zymo-GridION-LOG-BB-SN     | 3.7  | 16   | <a href="https://nanopore.s3.climb.ac.uk/Zymo-GridION-LOG-BB-SN_basecalled.tgz">tar.gz</a> | to follow | <a href="analysis/nanoplot_fastq/Zymo-GridION-LOG-BB-SN_nanoplot_fastq/Zymo-GridION-LOG-BB-SNNanoPlot-report.pdf">pdf</a> |
+| Zymo-GridION-EVEN-BB-SN    | 3.5  | 14   | <a href="https://nanopore.s3.climb.ac.uk/Zymo-GridION-EVEN-BB-SN_basecalled.tgz">tar.gz</a> | to follow | <a href="analysis/nanoplot_fastq/Zymo-GridION-EVEN-BB-SN_nanoplot_fastq/Zymo-GridION-EVEN-BB-SNNanoPlot-report.pdf">pdf</a> |
 
 ## Further information
+
+Please refer to <a href="https://www.slideshare.net/scalene/assessing-ultradeep-longread-metagenomics-on-oxford-nanopore-promethion">Josh Quick's talk at Genome Science 2018</a>.
+
 ### License
 Data are available under a Creative Commons Attribution 4.0 International (CC BY 4.0) <a href="https://creativecommons.org/licenses/by/4.0/">license</a>, i.e. you are free to use the data with attribution.
 
@@ -45,6 +48,6 @@ We are grateful to Hannah McDonnell (Cambridge Biosciences) for free samples of 
 
 ## Previous Data Releases
 
-   - September 2018 - <a href="rev1.html">Revision 1 data available here.</a>
 
-   
+  - September 2018 - <a href="rev1.html">Revision 1 data available here.</a>
+
