@@ -38,7 +38,6 @@ We loaded the same libraries on GridION and PromethION, permitting a direct comp
 ## Further information
 
 
-Please refer to <a href="https://www.slideshare.net/scalene/assessing-ultradeep-longread-metagenomics-on-oxford-nanopore-promethion">Josh Quick's talk at Genome Science 2018</a>.
 
 
 ## License
