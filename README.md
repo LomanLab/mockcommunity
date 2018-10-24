@@ -28,12 +28,12 @@ We loaded the same libraries on GridION and PromethION, permitting a direct comp
 
 ### Data Availability
 
-| Name                   | Reads (M)    | Yield (G)    | FASTQ      | FAST5       | NanoStat       |
-|----------------------------|------|------|------------|-------------|----------------|
-| Zymo-PromethION-LOG-BB-SN  | 35.1 | 148  | <a href="https://nanopore.s3.climb.ac.uk/Zymo-PromethION-LOG-BB-SN_basecalls.tar.gz">64h run</a>, <a href="https://nanopore.s3.climb.ac.uk/Zymo-PromethION-LOG-BB-SN-restarts_basecalls.tar.gz">restarts</a>      | to follow   | <a href="analysis/nanoplot_fastq/Zymo-PromethION-LOG-BB-SN_nanoplot_fastq/Zymo-PromethION-LOG-BB-SNNanoPlot-report.pdf">pdf</a> |
-| Zymo-PromethION-EVEN-BB-SN | 36.5 | 146  | <a href="https://nanopore.s3.climb.ac.uk/Zymo-PromethION-EVEN-BB-SN_basecalls.tar.gz">64h run</a>, <a href="https://nanopore.s3.climb.ac.uk/Zymo-PromethION-LOG-BB-SN-restarts_basecalls.tar.gz">restarts</a>  | to follow | <a href="https://github.com/LomanLab/mockcommunity/blob/master/analysis/nanoplot_fastq/Zymo-PromethION-EVEN-BB-SN_nanoplot_fastq/Zymo-PromethION-EVEN-BB-SNNanoPlot-report.pdf">pdf</a> |
-| Zymo-GridION-LOG-BB-SN     | 3.7  | 16   | <a href="https://nanopore.s3.climb.ac.uk/Zymo-GridION-LOG-BB-SN_basecalled.tgz">48h run</a> | to follow | <a href="analysis/nanoplot_fastq/Zymo-GridION-LOG-BB-SN_nanoplot_fastq/Zymo-GridION-LOG-BB-SNNanoPlot-report.pdf">pdf</a> |
-| Zymo-GridION-EVEN-BB-SN    | 3.5  | 14   | <a href="https://nanopore.s3.climb.ac.uk/Zymo-GridION-EVEN-BB-SN_basecalled.tgz">48h run</a> | to follow | <a href="analysis/nanoplot_fastq/Zymo-GridION-EVEN-BB-SN_nanoplot_fastq/Zymo-GridION-EVEN-BB-SNNanoPlot-report.pdf">pdf</a> |
+|Name|Reads (M)|Yield (G)|FASTQ|Run Folder|Restarts|FAST5|
+|:--|:--|:--|:--|:--|:--|:--|
+|Zymo-PromethION-LOG-BB-SN|35.1|148|[fastq.gz](https://nanopore.s3.climb.ac.uk/Zymo-PromethION-LOG-BB-SN.fq.gz)|[64h run](https://nanopore.s3.climb.ac.uk/Zymo-PromethION-LOG-BB-SN_basecalls.tar.gz)|[restarts](https://nanopore.s3.climb.ac.uk/Zymo-PromethION-LOG-BB-SN-restarts_basecalls.tar.gz)|to follow|
+|Zymo-PromethION-EVEN-BB-SN|36.5|146|[fastq.gz](https://nanopore.s3.climb.ac.uk/Zymo-PromethION-EVEN-BB-SN.fq.gz)|[64h run](https://nanopore.s3.climb.ac.uk/Zymo-PromethION-EVEN-BB-SN_basecalls.tar.gz)|[restarts](https://nanopore.s3.climb.ac.uk/Zymo-PromethION-LOG-BB-SN-restarts_basecalls.tar.gz)|to follow|
+|Zymo-GridION-LOG-BB-SN|3.7|16|[fastq.gz](https://nanopore.s3.climb.ac.uk/Zymo-GridION-LOG-BB-SN.fq.gz)|[48h run](https://nanopore.s3.climb.ac.uk/Zymo-GridION-LOG-BB-SN_basecalled.tgz)|n/a|[signal.tar](https://nanopore.s3.climb.ac.uk/Zymo-GridION-LOG-BB-SN_signal.tar)|
+|Zymo-GridION-EVEN-BB-SN|3.5|14|[fastq.gz](https://nanopore.s3.climb.ac.uk/Zymo-GridION-EVEN-BB-SN.fq.gz)|[48h run](https://nanopore.s3.climb.ac.uk/Zymo-GridION-EVEN-BB-SN_basecalled.tgz)|n/a|[signal.tar](https://nanopore.s3.climb.ac.uk/Zymo-GridION-EVEN-BB-SN_signal.tar)|
 
 ## Further information
 
