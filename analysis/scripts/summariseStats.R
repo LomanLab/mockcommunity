@@ -4,7 +4,7 @@ library(gtools)
 # from https://gist.github.com/shujishigenobu/1858458 by shujishigenobu
 N50 <- function(x) {
     x.sorted <- rev(sort(x))
-    return(x.sorted[cumsum(x.sorted) >= sum(x.sorted)*0.5][1])
+    return(x.sorted[cumsum(as.numeric(x.sorted)) >= sum(x.sorted)*0.5][1])
 }
 
 args=commandArgs(T)
