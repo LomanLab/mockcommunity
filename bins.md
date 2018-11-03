@@ -9,7 +9,7 @@ Reads binned versus the Illumina per-isolate assembly.
 
 ## Subsampled @ 200x
 
-   - <a href="https://nanopore.s3.climb.ac.uk/Zymo-GridION-binned-R94.native.200x.tgz">PromethION 200x coverage per bacteria</a>
+   - <a href="https://nanopore.s3.climb.ac.uk/Zymo-GridION-binned-R94.native.200x.tgz">GridION 200x coverage per bacteria</a>
    - <a href="https://nanopore.s3.climb.ac.uk/Zymo-PromethION-binned-R94.native.200x.tgz">PromethION 200x coverage per bacteria</a>
 
 
