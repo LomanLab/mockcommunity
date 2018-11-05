@@ -51,5 +51,5 @@ We are grateful to Hannah McDonnell (Cambridge Biosciences) for free samples of 
 ## Previous Data Releases
 
 
-  - September 2018 - <a href="rev1.html">Revision 1 data available here.</a>
+  - September 2018 - <a href="https://github.com/LomanLab/mockcommunity/blob/master/rev1.md">Revision 1 data available here.</a>
 
