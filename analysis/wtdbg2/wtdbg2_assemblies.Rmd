@@ -1,0 +1,36 @@
+---
+title: "wtdbg2 parameter tests"
+output:
+  html_document:
+    df_print: paged
+---
+
+## Introduction
+
+wtdbg2 assemblies of GRIDION-EVEN with various parameters to wtdbg2. Contigs assigned to taxa by Kraken2.
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+setwd('~/work/mockcommunity/analysis/wtdbg2')
+```
+
+```{r}
+assemblies=read_tsv('krakenreport.txt')
+```
+
+## All contigs
+
+```{r}
+assemblies = assemblies %>% mutate(Label=paste(Limit,Overlaps))
+ggplot(assemblies,aes(x=Label, y=ContigSize, fill=Taxon)) + geom_bar(stat="identity", colour="black", size=0.2) +theme(axis.text.x = element_text(angle = 90, hjust = 1))
+```
+
+## Contigs >100kbp
+
+```{r}
+assemblies = assemblies %>% mutate(Label=paste(Limit,Overlaps))
+ggplot(assemblies %>% filter(ContigSize>100000),aes(x=Label, y=ContigSize, fill=Taxon)) + geom_bar(stat="identity", colour="black", size=0.2) +theme(axis.text.x = element_text(angle = 90, hjust = 1))
+```
