@@ -5,7 +5,7 @@ print ("SampleID\tZymo\tPlatform\tExtraction\tSuperNatant\tLength\tLimit\tOverla
 for fn in sys.argv[1:]:
     path, filename = fn.split("/")
 
-    conditions = path.split("-")
+    conditions = path.replace('.fq.wtdbg2.', '-').split("-")
 
     for ln in open(fn):
         col = ln.split("\t")
