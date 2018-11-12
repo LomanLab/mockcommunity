@@ -8,10 +8,10 @@ Number of reads:	3491390
 Read length N50:	5213
 Total bases:	14008214645
 Number, percentage and megabases of reads above quality cutoffs
->Q5:	3203897 (91.8%) 1338.4Mb
->Q7:	2902065 (83.1%) 1231.4Mb
->Q10:	1532202 (43.9%) 682.9Mb
->Q12:	13365 (0.4%) 4.9Mb
+>Q5:	3203897 (91.8%) 13384.0Mb
+>Q7:	2902065 (83.1%) 12314.1Mb
+>Q10:	1532202 (43.9%) 6829.0Mb
+>Q12:	13365 (0.4%) 48.9Mb
 >Q15:	0 (0.0%) 0.0Mb
 Top 5 highest mean basecall quality scores and their read lengths
 1:	13.3 (1222; a8eddd96-21f9-4251-8baf-1e8fa13c9e07)
