@@ -9,8 +9,9 @@ for fn in sys.argv[1:]:
         fields = rec.description.split(" ")
         read_id = fields[0]
         for f in fields[1:]:
-            key, val = f.split("=")
-            if key == 'start_time':
-                dt = dateutil.parser.parse(val)
-                print ("%s\t%s" % (read_id, int(time.mktime(dt.timetuple())) ))
+            if f.startswith('start_time'):
+                key, val = f.split("=")
+                if key == 'start_time':
+                    dt = dateutil.parser.parse(val)
+                    print ("%s\t%s" % (read_id, int(time.mktime(dt.timetuple())) ))
 

@@ -1,6 +1,0 @@
-Run	SampleMetadata
-Zymo-GridION-EVEN-BB-SN	even
-Zymo-GridION-LOG-BB-SN	staggered
-Zymo-PromethION-EVEN-BB-SN	even
-Zymo-PromethION-LOG-BB-SN	staggered
-Zymo-GridION-EVEN-BB-SN-PCR-R10	even
