@@ -14,7 +14,7 @@ prefix = args[3]
 
 st=read_tsv(statsfn)
 
-abundance_metadata=read_tsv(paste0("refs/",metadata,".txt"), comment="#")
+abundance_metadata=read_tsv(paste0("../metadata/",metadata,".txt"), comment="#")
 
 a=st %>% group_by(Genome) %>% 
          summarise(n=n(),
