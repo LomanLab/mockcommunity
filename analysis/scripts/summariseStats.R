@@ -24,7 +24,7 @@ a=st %>% group_by(Genome) %>%
                    maxlen=max(ALen),
                    N50=N50(ALen))
 
-sources=read_tsv("refs/sources.txt", comment="#")
+sources=read_tsv("../metadata/sources.txt", comment="#")
 b=inner_join(a, sources, by=c("Genome"="Abbrev"))
 b=inner_join(b, abundance_metadata, by=c("Genome"="Abbrev"))
 

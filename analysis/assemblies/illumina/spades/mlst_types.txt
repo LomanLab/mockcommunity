@@ -1,0 +1,20 @@
+in506_1.mlst.txt-FILE	SCHEME	ST	aroC	dnaN	hemD	hisD	purE	sucA	thrA
+in506_1.mlst.txt:in506_1_Salmonella_enterica/scaffolds.fasta	senterica	139	36	31	57	14	26	34	8
+--
+in506_2.mlst.txt-FILE	SCHEME	ST	arcC	aroE	glpF	gmk	pta	tpi	yqiL
+in506_2.mlst.txt:in506_2_Staphylococcus_aureus/scaffolds.fasta	saureus	9	3	3	1	1	1	1	10
+--
+in506_3.mlst.txt-FILE	SCHEME	ST	gdh	gyd	pstS	gki	aroE	xpt	yqiL
+in506_3.mlst.txt:in506_3_Enterococcus_faecalis/scaffolds.fasta	efaecalis	55	3	7	23	1	9	16	7
+--
+in506_4.mlst.txt-FILE	SCHEME	ST	glpF	ilvD	pta	purH	pycA	rpoD	tpiA
+in506_4.mlst.txt:in506_4_Bacillus_subtilis/scaffolds.fasta	bsubtilis	7	9	4	6	7	5	4	5
+--
+in506_5.mlst.txt-FILE	SCHEME	ST	adk	fumC	gyrB	icd	mdh	purA	recA
+in506_5.mlst.txt:in506_5_Escherichia_coli/scaffolds.fasta	ecoli	10	10	11	4	8	8	8	2
+--
+in506_6.mlst.txt-FILE	SCHEME	ST	acs	aro	gua	mut	nuo	pps	trp
+in506_6.mlst.txt:in506_6_Pseudomonas_aeruginosa/scaffolds.fasta	paeruginosa	252	6	28	4	3	3	4	7
+--
+in506_7.mlst.txt-FILE	SCHEME	ST	abcZ	bglA	cat	dapE	dat	ldh	lhkA
+in506_7.mlst.txt:in506_7_Listeria_monocytogenes/scaffolds.fasta	lmonocytogenes	449	3	1	1	1	18	28	3
