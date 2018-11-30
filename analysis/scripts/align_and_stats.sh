@@ -11,5 +11,5 @@ samtools index results/$run.sorted.bam
 #generate mapping stats
 samtools view -h results/$run.sorted.bam | python scripts/bamstats.py - > results/$run.stats.txt
 #summary
-Rscript scripts/summariseStats.R results/$run.stats.txt $metadata results/$run
+#Rscript scripts/summariseStats.R results/$run.stats.txt $metadata results/$run
 
