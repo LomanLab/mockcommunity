@@ -1,0 +1,199 @@
+
+def read_metadata(fn, key):
+    import csv
+    metadata = {}
+    reader = csv.DictReader(open(fn), dialect='excel-tab')
+    for row in reader:
+        if row[reader.fieldnames[0]].startswith('#'):
+            continue
+        metadata[row[key]] = row
+    return metadata
+
+METADATA = read_metadata('../metadata/runs.txt', 'Run')
+SOURCES = read_metadata('../metadata/sources.txt', 'Abbrev')
+
+if 'run' in config:
+    SAMPLES = [config['run'],]
+else:
+    SAMPLES = METADATA.keys()
+
+GENOMES = ['ef', 'lm', 'ec', 'sa', 'sc', 'cn', 'bs', 'se', 'lf', 'pa']
+
+def get_binned_reads(wildcards):
+    binned_reads = []
+    for g in GENOMES:
+        for s in SAMPLES:
+            for cov in ['100', '200']:
+                binned_reads.append("binned_subsets/%s.%s.%s.%s.%s.%s.filtlong4000.fq.gz" % (s, g, METADATA[s]['Platform'], METADATA[s]['Pore'], METADATA[s]['Amplification'], cov))
+                binned_reads.append("binned_subsets/%s.%s.%s.%s.%s.%s.random.fq.gz" % (s, g, METADATA[s]['Platform'], METADATA[s]['Pore'], METADATA[s]['Amplification'], cov))
+    return binned_reads
+
+def get_nanoplot_input(wildcards):
+    m = METADATA[wildcards.sample]
+    inputs = []
+    if m['Dir1']:
+        inputs.append(m['Dir1'])
+    if m['Dir2']:
+        inputs.append(m['Dir2'])
+    return inputs
+
+def get_nanoplot_output(wildcards):
+    outputs = []
+    for s in SAMPLES:
+        if METADATA[s]['Dir1']:
+             outputs.append("%s_summary_stats.compressed.txt" % (s,))
+             outputs.append("%s_nanoplot" % (s,))
+    print (outputs)
+    return outputs
+
+def get_average_read_length(fn):
+    return 4000
+
+    for fn in open("average_read_length.txt"):
+        cols = fn.split("\t")
+        if col[0] == fn:
+            return int(col[1])
+    print ("Could not find %s\n" % (fn,))
+    raise SystemExit
+
+rule all:
+    input:
+        get_nanoplot_output,
+        expand("results/{sample}.stats.txt", sample=SAMPLES),
+        expand("results/{sample}_stats.tsv", sample=SAMPLES),
+        get_binned_reads,
+        expand("binned_reads/{sample}_{genome}.fastq", sample=SAMPLES, genome=GENOMES),
+        expand("{sample}.summary_stats.compressed.txt", sample=SAMPLES),
+        expand("results/{sample}.quality.txt", sample=SAMPLES),
+
+rule nanoplot:
+    input:
+        get_nanoplot_input
+    output:
+        directory("{sample}_nanoplot"), "{sample}.summary_stats.txt"
+    params:
+        datadir1=lambda wildcards: METADATA[wildcards.sample]['Dir1'],
+        datadir2=lambda wildcards: METADATA[wildcards.sample]['Dir2'] if METADATA[wildcards.sample]['Dir2'] else ''
+    shell:
+        "scripts/run_nanoplot.sh {params.datadir1} {wildcards.sample} {params.datadir2}"
+
+rule concat_summaries:
+    input:
+        get_nanoplot_output
+        #expand("{sample}.summary_stats.compressed.txt", sample=SAMPLES)
+    output:
+        "compressed_summaries.txt"
+    shell:
+        "cat {input} > {output}"
+
+rule compress_summaries:
+    input:
+        "{sample}.summary_stats.txt"
+    output:
+        "{sample}.summary_stats.compressed.txt"
+    shell:
+        "tail -n +2 {input} |"
+        "awk -F'\\t' '{{{{printf(\"{wildcards.sample}\\t%s\\t%s\\t%s\\t%s\\t%s\\n\", $5, $6, $8, $12, $13);}}}}' > {output} &&"
+        "[[ -s {output} ]]"
+
+rule align_and_stats:
+    input:
+        "../fastq/{sample}.fq.gz"
+    output:
+        "results/{sample}.stats.txt",
+        "results/{sample}.sorted.bam",
+        "results/{sample}.sorted.bam.bai"
+    params:
+        metadata=lambda wildcards: METADATA[wildcards.sample]['SampleMetadata']
+    shell:
+        "scripts/align_and_stats.sh {input} {wildcards.sample} {params.metadata}"
+
+rule alignstats:
+    input:
+        "results/{sample}.stats.txt"
+    output:
+        "results/{sample}_stats.tsv"
+    params:
+        metadata=lambda wildcards: METADATA[wildcards.sample]['SampleMetadata']
+    shell:
+        "Rscript scripts/summariseStats.R {input} {params.metadata} results/{wildcards.sample}"
+
+rule binreads:
+    input:
+        "results/{sample}.sorted.bam"
+    output:
+        expand("binned_reads/{sample}_{genome}.fastq", genome=GENOMES, sample="{sample}")
+    shell:
+        "python scripts/binreads.py {input} binned_reads/{wildcards.sample}"
+
+rule readquality:
+    input:
+        "results/{sample}.sorted.bam"
+    output:
+        "results/{sample}.quality.txt"
+    shell:
+        "python scripts/read_quality.py {input} {wildcards.sample} > {output} &&"
+        "[[ -s {output} ]]"
+
+rule subsetreads100x:
+    input:
+        "binned_reads/{sample}_{genome}.fastq"
+    params:
+        bases=lambda wildcards: int(SOURCES[wildcards.genome]['GenomeSize'])*100
+    output:
+        "binned_reads/{sample}.{genome}.{platform}.{pore}.{amplification}.100.filtlong4000.fq.gz"
+    shell:
+        "../bin/Filtlong/bin/filtlong -t {params.bases} --min_length 4000 --mean_q_weight 2 {input} | gzip -1 > {output} &&"
+        "[[ -s {output} ]]"
+
+rule subsetreads200x:
+    input:
+        "binned_reads/{sample}_{genome}.fastq"
+    params:
+        bases=lambda wildcards: int(SOURCES[wildcards.genome]['GenomeSize'])*200
+    output:
+        "binned_subsets/{sample}.{genome}.{platform}.{pore}.{amplification}.200.filtlong4000.fq.gz"
+    shell:
+        "../bin/Filtlong/bin/filtlong -t {params.bases} --min_length 4000 --mean_q_weight 2 {input} | gzip -1 > {output} &&"
+        "[[ -s {output} ]]"
+
+rule getaveragereadlength:
+    input:
+        expand("binned_reads/{sample}_{genome}.fastq", sample=SAMPLES, genome=GENOMES)
+    output:
+        "average_read_length.txt"
+    shell:
+        "python scripts/average_read_length.py {input} > {output}"
+
+rule subsetrandomreads100x:
+    input:
+        fastq="binned_reads/{sample}_{genome}.fastq",
+        avgreadlength="average_read_length.txt"
+    params:
+        bases=lambda wildcards: int(SOURCES[wildcards.genome]['GenomeSize'])*100
+    output:
+        "binned_subsets/{sample}.{genome}.{platform}.{pore}.{amplification}.100.random.fq.gz"
+    shell:
+        "python scripts/filter_and_subsample.py {params.bases} <(seqkit shuffle {input.fastq}) |gzip > {output} && "
+        "[[ -s {output} ]]"
+
+rule wtdbg2bins:
+    input:
+        "binned_subsets/{sample}.{genome}.{platform}.{pore}.{amplification}.100.random.fq.gz"
+    output:
+        "analysis/assemblies/wtdbg2/{sample}.{genome}.{platform}.{pore}.{amplification}.wtdbg2"
+    shell:
+        "/cephfs/lomanlabz/sam/bin/wtdbg2 -i {input} -o {output} -L 5000 -e 10"
+
+rule subsetrandomreads200x:
+    input:
+        fastq="binned_reads/{sample}_{genome}.fastq",
+        avgreadlength="average_read_length.txt"
+    params:
+        bases=lambda wildcards: int(SOURCES[wildcards.genome]['GenomeSize'])*200
+    output:
+        "binned_subsets/{sample}.{genome}.{platform}.{pore}.{amplification}.200.random.fq.gz"
+    shell:
+        "python scripts/filter_and_subsample.py {params.bases} <(seqkit shuffle {input.fastq}) | gzip > {output} && "
+        "[[ -s {output} ]]"
+
