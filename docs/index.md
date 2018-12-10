@@ -1,4 +1,7 @@
-# Nanopore GridION and PromethION Mock Microbial Community Data Community Release
+---
+layout: default
+title: Nanopore GridION and PromethION Mock Microbial Community Data Community Release
+---
 
 ## Release 2 (2018-10-17)
 
@@ -18,7 +21,7 @@ We loaded the same libraries on GridION and PromethION, permitting a direct comp
      - PromethION (Zymo-PromethION-EVEN-BB-SN)
 
 ### Zymo Community Standards 2 (Log/Staggered) Batch ZRC190842
- 
+
    - Useful for evaluating limit of detection at high coverage and assess metagenomics assembly across large differences in abundances
    - 10 species (5 Gram-positive, 3 Gram-negative, 2 yeast) ranging from 10^2 - 10^8 genomic DNA abundance (total input 5 x 10^8 cells)
    - <a href="https://www.zymoresearch.eu/media/amasty/amfile/attach/_D6310_ZymoBIOMICS_Microbial_Community_Standard_II_Log_Distribution_v._1.1.2.pdf">Zymo Specification Sheet</a>
