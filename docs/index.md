@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Nanopore GridION and PromethION Mock Microbial Community Data Community Release
+title: Home
 ---
 
 ## Release 2 (2018-10-17)
