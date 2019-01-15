@@ -79,7 +79,7 @@ title: Assemblies
 {::nomarkdown}<img height=150 width=150 src='png/Zymo-GridION-EVEN-BB-SN.fq.wtdbg2.L6000-e3-K10000-NMX6000-S1-p19-r1.bacillus_subtilis.png'>{:/}
 </td>
 <td>
-<img height=150 width=150 src='png/Zymo-GridION-EVEN-BB-SN.fq.wtdbg2.L6000-e3-K10000-NMX6000-S1-p19-r1.enterococcus_faecalis.png'>
+<img height=150 width=150 src='png/Zymo-GridION-EVEN-BB-SN.fq.wtdbg2.L6000-e3-K10000-NMX6000-S1-p19-r1.enterococcus_faecalis.png'/>
 </td>
 <td>
 <img height=150 width=150 src='png/Zymo-GridION-EVEN-BB-SN.fq.wtdbg2.L6000-e3-K10000-NMX6000-S1-p19-r1.escherichia_coli.png'>
