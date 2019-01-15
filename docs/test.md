@@ -78,7 +78,7 @@ title: Assemblies
 <td>1087</td>
 <td>874739</td>
 <td>
-<img height=150 width=150 src='png/Zymo-GridION-EVEN-BB-SN.fq.wtdbg2.L6000-e3-K10000-NMX6000-S1-p19-r1.bacillus_subtilis.png'>
+{::nomarkdown}<img height=150 width=150 src='png/Zymo-GridION-EVEN-BB-SN.fq.wtdbg2.L6000-e3-K10000-NMX6000-S1-p19-r1.bacillus_subtilis.png'>{:/}
 </td>
 <td>
 <img height=150 width=150 src='png/Zymo-GridION-EVEN-BB-SN.fq.wtdbg2.L6000-e3-K10000-NMX6000-S1-p19-r1.enterococcus_faecalis.png'>
