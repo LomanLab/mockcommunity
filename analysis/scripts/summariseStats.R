@@ -16,6 +16,17 @@ st=read_tsv(statsfn)
 
 abundance_metadata=read_tsv(paste0("../metadata/",metadata,".txt"), comment="#")
 
+overallstats = st %>%
+  summarise(n=n(),
+            bases=sum(ALen/1),
+            meanlen=mean(ALen),
+            medianlen=median(ALen),
+            maxlen=max(ALen),
+            N50=N50(ALen)) %>%
+  mutate(run=prefix) %>%
+  select(run, n, bases, meanlen, medianlen, N50, maxlen) %>%
+  write_tsv(paste0(prefix,"_run_stats.tsv"))
+
 a=st %>% group_by(Genome) %>% 
          summarise(n=n(),
                    bases=sum(ALen/1),
