@@ -1,0 +1,18 @@
+<nav class="navbar navbar-default" style="margin-bottom:0">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">mockcommunity</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+      <ul class="nav navbar-nav">
+        {% for p in site.pages %}
+        <li {% if p.url == page.url %}class="active"{% endif %}>
+        	<a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+
+  </div><!-- /.container-fluid -->
+</nav>
