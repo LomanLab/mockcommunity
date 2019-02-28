@@ -1,5 +1,25 @@
 # Nanopore GridION and PromethION Mock Microbial Community Data Community Release
 
+## R10 Data Release (2019-02-28)
+
+We are pleased to be able to release prototype R10 pore data for the even Zymo mock community generated on the Oxford Nanopore GridION. This data is from the even mock community and has been generated in the same manner as previous releases, except that this material is from PCR-amplified material.
+
+The R10 pore should give better discrimination in homopolymer regions and preliminary analysis suggests it improves consensus-level accuracy (see Jared Simpson's talk at NCM18 for details: https://vimeo.com/306201411). The data are made available without restriction for community analysis. We expect to release more analysis in the near future. 
+
+Summary stats:
+
+  * 4.23M reads across 16.59Gb of data
+  * Read length N50 4,620bp
+
+Signal files were basecalled using Guppy 2.3.1+1b9405b using a pre-release basecalling model ```R10_flipflop_model.json```.
+
+Download links (courtesy of <a href="http://www.climb.ac.uk">CLIMB</a>):
+
+  - <a href="https://s3.climb.ac.uk/nanopore/Zymo-GridION-EVEN-BB-SN-PCR-R10HC-flipflop.fq.gz">FASTQ (12Gb)</a>
+  - <a href="https://s3.climb.ac.uk/nanopore/Zymo-GridION-EVEN-BB-SN-PCR-R10HC_multi.tar">FAST5</a>
+
+We thank Rosemary Dokos, Chris Wright, Jon Pugh and Jayne Wallace from Oxford Nanopore Technologies for their help and assistance with preparation of this dataset.
+
 ## Release 2 (2018-10-17)
 
 We recently released data for the Zymo mock community (1 run on PromethION, 3 runs on MinION). However, we found that our previous bead-based DNA extraction which focused on the bacterial cell pellet from the Zymo mock community resulted in under-representation of the Gram-negative bacteria in the sample. Additionally, during this work, the composition of the Zymo mock community changed.
