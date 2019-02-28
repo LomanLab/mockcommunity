@@ -4,19 +4,20 @@
 
 We are pleased to be able to release prototype R10 pore data for the even Zymo mock community generated on the Oxford Nanopore GridION. This data is from the even mock community and has been generated in the same manner as previous releases, except that this material is from PCR-amplified material.
 
-The R10 pore should give better discrimination in homopolymer regions and preliminary analysis suggests it improves consensus-level accuracy (see Jared Simpson's talk at NCM18 for details: https://vimeo.com/306201411). The data are made available without restriction for community analysis. We expect to release more analysis in the near future. 
+The R10 pore is expected to give better discrimination in homopolymer regions and preliminary analysis suggests it improves consensus-level accuracy (see Jared Simpson's talk at NCM18 for early results: https://vimeo.com/306201411). This dataset is made available without restriction for community analysis. We anticipate releasing detailed analysis in the near future. 
 
 Summary stats:
 
-  * 4.23M reads across 16.59Gb of data
-  * Read length N50 4,620bp
+  * Reads: 4.23M 
+  * Bases: 16.59Gb
+  * Read length N50: 4,620bp
 
 Signal files were basecalled using Guppy 2.3.1+1b9405b using a pre-release basecalling model ```R10_flipflop_model.json```.
 
 Download links (courtesy of <a href="http://www.climb.ac.uk">CLIMB</a>):
 
   - <a href="https://s3.climb.ac.uk/nanopore/Zymo-GridION-EVEN-BB-SN-PCR-R10HC-flipflop.fq.gz">FASTQ (12Gb)</a>
-  - <a href="https://s3.climb.ac.uk/nanopore/Zymo-GridION-EVEN-BB-SN-PCR-R10HC_multi.tar">FAST5</a>
+  - <a href="https://s3.climb.ac.uk/nanopore/Zymo-GridION-EVEN-BB-SN-PCR-R10HC_multi.tar">FAST5 (231Gb)</a>
 
 We thank Rosemary Dokos, Chris Wright, Jon Pugh and Jayne Wallace from Oxford Nanopore Technologies for their help and assistance with preparation of this dataset.
 
