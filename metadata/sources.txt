@@ -1,0 +1,11 @@
+Abbrev	Species	GenomeSize
+pa	Pseudomonas aeruginosa	6792000
+lm	Listeria monocytogenes	2992000
+ec	Escherichia coli	4875000
+lf	Lactobacillus fermentum	1905000
+bs	Bacillus subtilis	4045000
+cn	Cryptococcus neoformans	18900000
+ef	Enterococcus faecalis	2845000
+sc	Saccharomyces cerevisiae	12100000
+se	Salmonella enterica	4760000
+sa	Staphylococcus aureus	2730000

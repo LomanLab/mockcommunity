@@ -1,0 +1,5 @@
+Run	SampleMetadata	Platform	Pore	Amplification	Dir1	Dir2
+Zymo-PromethION-EVEN-BB-SN-promflipflop	even	PromethION	R94	native	../data/Zymo-PromethION-EVEN-BB-SN-promflipflop/2-A5-D5	../data/Zymo-PromethION-EVEN-BB-SN-restarts-promflipflop/2-A5-D5
+Zymo-PromethION-LOG-BB-SN-promflipflop	staggered	PromethION	R94	native	../data/Zymo-PromethION-LOG-BB-SN-promflipflop/2-A11-D11	../data/Zymo-PromethION-LOG-BB-SN-restarts-promflipflop/2-A11-D11
+Zymo-GridION-EVEN-BB-SN-flipflop	even	GridION	R94	native	../data/Zymo-GridION-EVEN-BB-SN-flipflop/GA10000
+Zymo-GridION-LOG-BB-SN-flipflop	staggered	GridION	R94	native	../data/Zymo-GridION-LOG-BB-SN-flipflop/GA20000
