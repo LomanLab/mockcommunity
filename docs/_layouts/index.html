@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+  <head>
+    <title>{{ page.title }} | Loman Lab Mock Community Experiments</title>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+    <style>
+    td {
+        padding: 0 10px 0 10px;
+        border: 0;
+        vertical-align: middle !important;
+    }
+    img {
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+    </style>
+
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    {% include nav.html %}
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          {% if site.github.is_project_page %}
+            <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
+          {% endif %}
+          <h3 style="color:#ddd;">Loman Lab Mock Community Experiments</h3>
+          <h1 style="color:white;">{{ page.title }}</h1>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner" style="max-width:75%">
+        <h3>Background</h3>
+        Long sequencing reads are information-rich: aiding <i>de novo</i> assembly and reference mapping, and consequently have great potential for the study of microbial communities. However, the best approaches for analysis of long-read metagenomic data are unknown. Additionally, rigorous evaluation of bioinformatics tools is hindered by a lack of long-read data from validated samples with known composition.
+
+        <h3>Methods</h3>
+        We sequenced two commercially-available mock communities containing ten microbial species (ZymoBIOMICS Microbial Community Standards) with Oxford Nanopore GridION and PromethION. Both communities and the ten individual species isolates were also sequenced with Illumina technology.
+
+        <h3>Data</h3>
+        We generated 14 and 16 Gbp from two GridION flowcells and 150 and 153 Gbp from two PromethION flowcells for the evenly-distributed and log-distributed communities respectively. Read length N50 ranged between 5.3 Kbp and 5.4 Kbp over the four sequencing runs. Basecalls and corresponding signal data are made available (4.2 TB in total).
+
+        <h3>Results</h3>
+        Alignment to Illumina-sequenced isolates demonstrated the expected microbial species at anticipated abundances, with the limit of detection for the lowest abundance species below 50 cells (GridION). \textit{De novo} assembly of metagenomes recovered long contiguous sequences without the need for pre-processing techniques such as binning.
+
+        <br/>
+        <b>We present ultra-deep, long-read nanopore datasets from a well-defined mock community. These datasets will be useful for those developing bioinformatics methods for long-read metagenomics and for the validation and comparison of current laboratory and software pipelines.</b>
+
+        </hr>
+
+        <h2>Illumina and PacBio draft assemblies</h2>
+        {% include faq_assemblies_table.html %}
+
+        <h2>Nanopore sequencing data sets</h2>
+        {% include faq_nanopore_table.html %}
+
+        </hr>
+        <h3>Further information</h3>
+        Please refer to <a href="https://www.slideshare.net/scalene/assessing-ultradeep-longread-metagenomics-on-oxford-nanopore-promethion">Josh Quick's talk at Genome Science 2018</a>.
+
+        <h3>License</h3>
+        Data are available under a Creative Commons Attribution 4.0 International (CC BY 4.0) <a href="https://creativecommons.org/licenses/by/4.0/">license</a>, i.e. you are free to use the data with attribution.
+
+        <h3>Acknowlegements</h3>
+        We are grateful to Radoslaw Poplawski (University of Birmingham) for assistance with CLIMB virtual machines and file systems to support this research. We thank Divya Mirrington (Oxford Nanopore Technologies) for advice on PromethION library preparation and sequencing. We thank Hannah McDonnell at Cambridge Biosciences for providing the ZymoBIOMICS Microbial Community Standards. We thank Jared Simpson (Ontario Institute for Cancer Research), Matt Loose (University of Nottingham) and John Tyson (University of British Columbia) for useful discussions and advice. We thank Christopher Mason and Alexa McIntyre (Cornell University) for making PacBio data available ahead of publication.
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        {% if site.github.is_project_page %}
+        <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        {% endif %}
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+  </body>
+</html>
