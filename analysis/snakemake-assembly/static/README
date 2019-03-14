@@ -1,0 +1,1 @@
+awk -v OFS='\t' '{print "C",$1,FILENAME,$2}' *_pb.fasta.fai | sed 's,_pb.fasta.fai,,' | sed -e "s/\b\(.\)/\u\1/g" | sed 's,_, ,' > ../static/pacbio.k2
