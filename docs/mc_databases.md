@@ -41,9 +41,10 @@ A database built in a similar way to `kraken2-microbial`, but instead allowing h
 * human
 
 The database has been made available for sharing by Daniel Fischer (Natural Resources Institute Finland) and was built [using scripts available on Github](https://github.com/fischuu/Kraken_db_install_scripts).
+CSC - IT Center for Science, Finland, is acknowledged for computational resources.
 
 **Prepared** 2019-03 **by** @fischuu
-* `hash.k2d` (140 GB, `0ef062f3dae7f497fe258f67c2e542fe`)
+* `hash.k2d` (141 GB, `0ef062f3dae7f497fe258f67c2e542fe`)
 * `opts.k2d` (48 B, `e77f42c833b99bf91a8315a3c19f83f7`)
 * `taxo.k2d` (5.2 MB, `f6591859824de9d1893002d5e8d1eee0`)
 
