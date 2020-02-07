@@ -3,6 +3,18 @@ layout: default
 title: News
 ---
 
+## R10.3 and 'R10M' Data Release (2020-02-07)
+
+As part of our ongoing benchmarking, we are releasing R10.3 pore data for even Zymo Community Standard (Even), generated on the Oxford Nanopore GridION. In line with previous releases, this data is from the even community standard. Extraction and sequencing was performed by Jo Stockton, using [Josh Quick's "Three Peaks" protocol](https://www.protocols.io/view/the-39-three-peaks-39-faecal-dna-extraction-method-7rshm6e). We merged two R10.3 runs to generate 4.6 Gbp total. Reads were assembled with [`Flye`](https://github.com/fenderglass/Flye), then polished on-GPU with [`Racon`](https://github.com/lbcb-sci/racon) and [`Medaka`](https://github.com/nanoporetech/medaka/), using our [`reticulatus` pipeline](https://github.com/SamStudio8/reticulatus). We acheived Q50 on two bacterial genomes.
+
+Additionally, we release data generated on the prototype R10 pore, basecalled with the methylation-aware guppy model ("R10M").
+
+[Download R10.3 Zymo-EVEN FASTQ](https://nanopore.s3.climb.ac.uk/mock/Zymo-GridION-EVEN-3Peaks-R103-merged.fq.gz) (4.8 GB, `78497b92a6b8fde2e0f5d2291c707949`).  
+[Download R10M Zymo-EVEN FASTQ](https://nanopore.s3.climb.ac.uk/mock/Zymo-GridION-Even-3Peaks-Native-R10_hac_meth.fq.gz) (32 GB, `eed7625452dc5a9b6f6313c9e7200fa2`).
+
+For more information, see the [R10 page](r10.html).
+
+
 ## R10 Data Release (2019-05-24)
 
 We are pleased to be able to release prototype R10 pore data for the even Zymo mock community generated on the Oxford Nanopore GridION. This data is from the even mock community and has been generated in the same manner as previous releases, except that this material is from PCR-amplified material. At London Calling 2019 we also showed our latest native R10 run, producing binned genomes at over Q40.
