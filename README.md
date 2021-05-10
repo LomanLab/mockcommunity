@@ -33,7 +33,7 @@ We loaded the same libraries on GridION and PromethION, permitting a direct comp
 
   - Useful for evaluating nanopore data analysis, including basecalling, alignment, assembly and taxonomic assignment methods
   - 10 species (5 Gram-positive, 3 Gram-negative, 2 yeast): the bacteria are present at 12% and yeast at 2% (by genomic DNA)
-  - <a href="https://www.zymoresearch.eu/media/amasty/amfile/attach/_D6300_ZymoBIOMICS_Microbial_Community_Standard_v1.1.3.pdf">Zymo Specification Sheet</a>
+  - <a href="https://github.com/LomanLab/mockcommunity/blob/master/specs/_d6300_zymobiomics_microbial_community_standard.pdf">Zymo Specification Sheet</a>
   - Data available from:
      - GridION (Zymo-GridION-EVEN-BB-SN)
      - PromethION (Zymo-PromethION-EVEN-BB-SN)
@@ -42,7 +42,7 @@ We loaded the same libraries on GridION and PromethION, permitting a direct comp
  
    - Useful for evaluating limit of detection at high coverage and assess metagenomics assembly across large differences in abundances
    - 10 species (5 Gram-positive, 3 Gram-negative, 2 yeast) ranging from 10^2 - 10^8 genomic DNA abundance (total input 5 x 10^8 cells)
-   - <a href="https://www.zymoresearch.eu/media/amasty/amfile/attach/_D6310_ZymoBIOMICS_Microbial_Community_Standard_II_Log_Distribution_v._1.1.2.pdf">Zymo Specification Sheet</a>
+   - <a href="https://github.com/LomanLab/mockcommunity/blob/master/specs/_d6310_zymobiomics_microbial_community_standard_ii_(log_distribution).pdf">Zymo Specification Sheet</a>
   - Data available from:
     - GridION (Zymo-GridION-LOG-BB-SN)
     - PromethION (Zymo-PromethION-LOG-BB-SN)
