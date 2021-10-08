@@ -5,7 +5,7 @@ title: Databases
 
 ### Newer kraken2 databases
 Since September 2020, Langmead et al. routinely contruct and distribute kraken2 hash files of the RefSeq database and [make them freely available for download via AWS](https://benlangmead.github.io/aws-indexes/k2). For posterity, we still provide links to our databases below.
-The Langmead `Base+PFP` database is equivalent to our older kraken2-microbial database below, so we would recommend downloading that instead.
+The Langmead `PlusPF` database is equivalent to our older kraken2-microbial database below, so we would recommend downloading that instead.
 
 ### kraken2-microbial (September 2018, 30GB)
 A database built by stacking the `kraken2` `--download-library` command for the following database types:
